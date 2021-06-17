@@ -1,4 +1,4 @@
-
+import PointsForm from './components/PointsForm';
 import './App.css';
 
 function App() {
@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Points Payment Tracker</h1>
+        <PointsForm />
       </header>
     </div>
   );
