@@ -5,8 +5,6 @@ const path = require('path')
 
 router.use('/api', apiRoute)
 
-router.get('/', (req, res) => {
-  return res.write('hello world')
-})
+
 
 module.exports = router
