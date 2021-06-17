@@ -11,7 +11,7 @@ app.use(routes);
 const port = process.env.PORT || 5000
 
 app.get('/', (req, res) => {
-  return res.send(`<h1>Hello from server at port ${port}</h1>`);
+  return res.send(`<h3>Hello from server at port ${port}</h3>`);
 })
 
 app.listen(port, console.log(`App listening on port: ${port}`))
