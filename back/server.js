@@ -1,12 +1,18 @@
 const express = require('express')
 const cors = require('cors')
 const routes = require("./routes");
+const mongoose = require("mongoose")
+const db = require('./config/keys').mongoURI
 
 const app = express()
 
 app.use(cors())
 
 app.use(routes);
+
+mongoose.connect(db, { useNewUrlParser: true })
+  .then(() => console.log("mongodb connected!"))
+  .catch(err => console.log(err))
 
 const port = process.env.PORT || 5000
 
