@@ -8,4 +8,5 @@ router.get('/', (_req, res) => {
   return res.send("<h3>Hello from the points route</h3>")
 })
 
+
 module.exports = router

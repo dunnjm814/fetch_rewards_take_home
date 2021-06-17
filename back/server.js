@@ -10,7 +10,7 @@ app.use(routes);
 
 const port = process.env.PORT || 5000
 
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   return res.send(`<h3>Hello from server at port ${port}</h3>`);
 })
 

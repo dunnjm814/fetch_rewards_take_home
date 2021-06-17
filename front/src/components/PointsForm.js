@@ -8,7 +8,8 @@ function PointsForm() {
   const [points, setPoints] = useState('')
   const [date, setDate] = useState('')
 
-  function handleSubmit() {
+  function handleSubmit(e) {
+    e.preventDefault()
     return console.log('submit')
   }
   return (
