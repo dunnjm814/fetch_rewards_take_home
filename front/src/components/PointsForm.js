@@ -10,13 +10,20 @@ function PointsForm() {
 
   async function handleSubmit(e) {
     e.preventDefault()
+    console.log(name)
+    const data = new FormData()
+    data.append("payer", name.toUpperCase());
+    data.append("points", points)
+    data.append("timestamp", date)
+    console.log(data)
     let postTransaction = await fetch("/api/points", {
-      method: "post",
+      method: "POST",
       headers: {
         "Accept": "application/json",
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({name, points, date})
+      // body: JSON.stringify({name, points, date})
+      body: JSON.stringify(data)
     }).then(res => res.json())
     return console.log(postTransaction)
   }
