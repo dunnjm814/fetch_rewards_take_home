@@ -10,9 +10,13 @@ app.use(cors())
 
 app.use(routes);
 
-mongoose.connect(db, { useNewUrlParser: true })
+mongoose
+  .connect(db, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
   .then(() => console.log("mongodb connected!"))
-  .catch(err => console.log(err))
+  .catch((err) => console.log(err));
 
 const port = process.env.PORT || 5000
 
